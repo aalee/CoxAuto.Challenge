@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>CoxAuto.Challenge.UI</AssemblyName>
+    <RootNamespace>CoxAuto.Challenge.UI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoxAuto.Challenge.Core\CoxAuto.Challenge.Core.csproj" />
+  </ItemGroup>
+
+</Project>
