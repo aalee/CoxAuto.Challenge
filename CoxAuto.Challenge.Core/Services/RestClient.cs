@@ -13,6 +13,7 @@ namespace CoxAuto.Challenge.Core.Services
     public class RestClient : IRestClient
     {
         private const string Urlbase = "http://api.coxauto-interview.com/api/";
+
         public async Task<HttpResponseMessage> GetDataSet()
         {
             var url = $"{Urlbase}datasetId";
@@ -58,7 +59,7 @@ namespace CoxAuto.Challenge.Core.Services
             var url = $"{Urlbase}{datasetId}/answer";
             using (var httpClient = new HttpClient())
             {
-                var answer = new Answer()
+                var answer = new Answer
                 {
                     Dealers = dealers
                 };

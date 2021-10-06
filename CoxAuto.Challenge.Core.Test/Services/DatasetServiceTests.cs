@@ -1,22 +1,19 @@
-﻿using Xunit;
-using CoxAuto.Challenge.Core.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using CoxAuto.Challenge.Core.Interfaces.Services;
+﻿using CoxAuto.Challenge.Core.Interfaces.Services;
+using Xunit;
 
 namespace CoxAuto.Challenge.Core.Services.Tests
 {
     public class DatasetServiceTests
     {
-        private IDatasetService _datasetService;
+        private readonly IDatasetService _datasetService;
+
         public DatasetServiceTests()
         {
             _datasetService = new DatasetService(new RestClient());
         }
-        [Fact()]
-        public async Task GetDatasetIdTest()
+
+        [Fact]
+        public void GetDatasetIdTest()
         {
             var result = _datasetService.GetDatasetId();
             Assert.NotNull(result);
